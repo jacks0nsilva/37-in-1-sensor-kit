@@ -1,10 +1,10 @@
 # KY-001: Sensor de Temperatura (DS18B20)
 
-Este diretório contém um projeto de exemplo para o Raspberry Pi Pico que demonstra como ler a temperatura ambiente utilizando o módulo sensor KY-001, que é baseado no popular sensor **DS18B20**.
+Este diretório contém um projeto de exemplo para o Raspberry Pi Pico W que demonstra como ler a temperatura ambiente utilizando o módulo sensor KY-001, que é baseado no popular sensor **DS18B20**.
 
 A abordagem utilizada aqui é de **baixo nível**, manipulando diretamente o pino GPIO para implementar o protocolo de comunicação digital **1-Wire**, sem a necessidade de bibliotecas de terceiros. Isso serve como um excelente estudo de caso sobre como protocolos baseados em temporização funcionam.
 
-Este projeto faz parte de uma coleção maior para explorar 37 periféricos com o Raspberry Pi Pico. Para mais informações, consulte o [README principal do repositório](../README.md).
+Este projeto faz parte de uma coleção maior para explorar 37 periféricos com o Raspberry Pi Pico W. Para mais informações, consulte o [README principal do repositório](../README.md).
 
 ![Esquema de Ligação](diagrama.jpg)
 
@@ -17,7 +17,7 @@ Este projeto faz parte de uma coleção maior para explorar 37 periféricos com 
 
 ## 🛠️ Componentes Necessários
 
-- 1x Raspberry Pi Pico
+- 1x Raspberry Pi Pico W
 - 1x Módulo Sensor de Temperatura KY-001 (DS18B20)
 - 1x Resistor de **4.7kΩ** (pull-up)
 - Protoboard e Jumpers
@@ -26,11 +26,11 @@ Este projeto faz parte de uma coleção maior para explorar 37 periféricos com 
 
 O protocolo 1-Wire requer um resistor de pull-up no pino de dados para funcionar corretamente. Conecte o resistor de 4.7kΩ entre o pino de Sinal (S) e o pino de 3.3V.
 
-| Pino do Módulo KY-001  | Conexão                     | Pino do Raspberry Pi Pico |
-| :--------------------- | :-------------------------- | :------------------------ |
-| **- (GND)**            | Terra                       | **GND**                   |
-| **VCC (Pino do meio)** | Alimentação 3.3V            | **3V3 (OUT)**             |
-| **S (Sinal)**          | Pino de Dados (com pull-up) | **GPIO 16**               |
+| Pino do Módulo KY-001  | Conexão                     | Pino do Raspberry Pi Pico W |
+| :--------------------- | :-------------------------- | :-------------------------- |
+| **- (GND)**            | Terra                       | **GND**                     |
+| **VCC (Pino do meio)** | Alimentação 3.3V            | **3V3 (OUT)**               |
+| **S (Sinal)**          | Pino de Dados (com pull-up) | **GPIO 16**                 |
 
 ## 💻 Estrutura do Código
 
