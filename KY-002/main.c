@@ -20,7 +20,9 @@ int main()
             gpio_put(LED_PIN, 1);
             printf("Vibração detectada!\n");
         } else {
+            printf("Sem vibração.\n");
             gpio_put(LED_PIN, 0);
         }
+        sleep_ms(100);
     }
 }
